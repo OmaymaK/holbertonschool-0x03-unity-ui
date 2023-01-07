@@ -3,27 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public float speed;
     private int score = 0;
     public int health = 5;
-
+    public Text scoreText;
     // Start is called before the first frame update
     void Start()
     {
         
     }
-    void Update()
-    {
-        if (health == 0)
-        {
-            Debug.Log("Game Over!");
-            SceneManager.LoadScene("maze");
-        }
-    }
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (Input.GetKey("up"))
@@ -44,14 +36,13 @@ public class PlayerController : MonoBehaviour
         }
         
     }
-
     void OnTriggerEnter(Collider other) 
     {
         if (other.tag == "Pickup")
         {
-            score += 1;
+            score++;
+            SetScoreText();
             Destroy(other.gameObject);
-            Debug.Log("Score: " + score);
         }
         if (other.tag == "Trap")
         {
@@ -63,5 +54,18 @@ public class PlayerController : MonoBehaviour
             Debug.Log("You win!");
         }
     }
-
+    // Update is called once per frame
+    void Update()
+    {
+        if (health == 0)
+        {
+            Debug.Log("Game Over!");
+            SceneManager.LoadScene("maze");
+        }
+    }
+    
+    void SetScoreText()
+    {
+        scoreText.text = "Score: " + this.score;
+    }
 }
