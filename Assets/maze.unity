@@ -432,6 +432,8 @@ GameObject:
   - component: {fileID: 73442118}
   - component: {fileID: 73442120}
   - component: {fileID: 73442119}
+  - component: {fileID: 73442121}
+  - component: {fileID: 73442122}
   m_Layer: 5
   m_Name: WinLoseText
   m_TagString: Untagged
@@ -501,6 +503,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73442117}
   m_CullTransparentMesh: 1
+--- !u!114 &73442121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73442117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f07062c32e0dc44b6364e40039d435, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  health: 5
+  scoreText: {fileID: 422918987}
+  healthText: {fileID: 1665557571}
+  player: {fileID: 992240673}
+  winlosetext: {fileID: 73442119}
+  winlosebg: {fileID: 1632656705}
+--- !u!54 &73442122
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73442117}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &101275641
 GameObject:
   m_ObjectHideFlags: 0
@@ -2004,6 +2041,8 @@ MonoBehaviour:
   scoreText: {fileID: 422918987}
   healthText: {fileID: 1665557571}
   player: {fileID: 992240673}
+  winlosetext: {fileID: 0}
+  winlosebg: {fileID: 0}
 --- !u!54 &422918989
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4009,6 +4048,8 @@ MonoBehaviour:
   scoreText: {fileID: 422918987}
   healthText: {fileID: 1665557571}
   player: {fileID: 992240673}
+  winlosetext: {fileID: 73442119}
+  winlosebg: {fileID: 1632656705}
 --- !u!1001 &1018671885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6187,6 +6228,8 @@ GameObject:
   - component: {fileID: 1632656704}
   - component: {fileID: 1632656706}
   - component: {fileID: 1632656705}
+  - component: {fileID: 1632656707}
+  - component: {fileID: 1632656708}
   m_Layer: 5
   m_Name: WinLoseBG
   m_TagString: Untagged
@@ -6253,6 +6296,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632656703}
   m_CullTransparentMesh: 1
+--- !u!114 &1632656707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632656703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f07062c32e0dc44b6364e40039d435, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  health: 5
+  scoreText: {fileID: 422918987}
+  healthText: {fileID: 1665557571}
+  player: {fileID: 992240673}
+  winlosetext: {fileID: 73442119}
+  winlosebg: {fileID: 1632656705}
+--- !u!54 &1632656708
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632656703}
+  serializedVersion: 2
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1639978547
 GameObject:
   m_ObjectHideFlags: 0
@@ -6659,6 +6737,8 @@ MonoBehaviour:
   scoreText: {fileID: 422918987}
   healthText: {fileID: 1665557571}
   player: {fileID: 992240673}
+  winlosetext: {fileID: 73442119}
+  winlosebg: {fileID: 1632656705}
 --- !u!1 &1683788933
 GameObject:
   m_ObjectHideFlags: 0

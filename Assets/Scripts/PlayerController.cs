@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
@@ -13,7 +12,8 @@ public class PlayerController : MonoBehaviour
     public Text scoreText;
     public Text healthText;
     public Rigidbody player;
-
+    public Text winlosetext;
+    public Image winlosebg;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,7 +54,11 @@ public class PlayerController : MonoBehaviour
         }
         if (other.tag == "Goal")
         {
-            Debug.Log("You win!");
+            winlosetext.text = "You Win!";
+            winlosetext.color = Color.black;
+            winlosebg.color = Color.green;
+            winlosebg.gameObject.SetActive(true);
+
         }
     }
     // Update is called once per frame
