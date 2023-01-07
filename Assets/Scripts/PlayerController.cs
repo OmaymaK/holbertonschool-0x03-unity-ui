@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
             winlosetext.color = Color.black;
             winlosebg.color = Color.green;
             winlosebg.gameObject.SetActive(true);
-
+            StartCoroutine(LoadScene(3));
         }
     }
     // Update is called once per frame
@@ -70,6 +70,7 @@ public class PlayerController : MonoBehaviour
             winlosetext.color = Color.white;
             winlosebg.color = Color.red;
             winlosebg.gameObject.SetActive(true);
+            StartCoroutine(LoadScene(3));
         }
     }
     
@@ -80,5 +81,12 @@ public class PlayerController : MonoBehaviour
     void SetHealthText()
     {
         healthText.text = "Health: " + this.health.ToString();
+    }
+    IEnumerator LoadScene(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene("Maze");
+        score = 0;
+        health = 5;
     }
 }
